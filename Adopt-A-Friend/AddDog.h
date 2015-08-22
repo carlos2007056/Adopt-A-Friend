@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AddDog.h
 //  Adopt-A-Friend
 //
 //  Created by Elias Vltaliano Vidaurre Davila on 8/22/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AddDog : UIViewController
 
 @end
-
