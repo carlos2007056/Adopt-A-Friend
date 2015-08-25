@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384CE6621B8BF99000556829 /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = 384CE6611B8BF99000556829 /* Declarations.m */; };
 		384E3B431B8909CC00C7B073 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B421B8909CC00C7B073 /* main.m */; };
 		384E3B461B8909CC00C7B073 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B451B8909CC00C7B073 /* AppDelegate.m */; };
 		384E3B491B8909CC00C7B073 /* Adopt_A_Friend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B471B8909CC00C7B073 /* Adopt_A_Friend.xcdatamodeld */; };
@@ -15,7 +16,7 @@
 		384E3B511B8909CC00C7B073 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384E3B501B8909CC00C7B073 /* Images.xcassets */; };
 		384E3B541B8909CC00C7B073 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384E3B521B8909CC00C7B073 /* LaunchScreen.xib */; };
 		384E3B601B8909CD00C7B073 /* Adopt_A_FriendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B5F1B8909CD00C7B073 /* Adopt_A_FriendTests.m */; };
-		384E3B6D1B890C3100C7B073 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B6C1B890C3100C7B073 /* IntroViewController.m */; };
+		384E3B6D1B890C3100C7B073 /* Intro.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B6C1B890C3100C7B073 /* Intro.m */; };
 		384E3B701B890C6600C7B073 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B6F1B890C6600C7B073 /* Home.m */; };
 		384E3B731B89115800C7B073 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B721B89115800C7B073 /* Register.m */; };
 		384E3B761B89123400C7B073 /* MainPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B751B89123400C7B073 /* MainPage.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		384CE6601B8BF99000556829 /* Declarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Declarations.h; sourceTree = "<group>"; };
+		384CE6611B8BF99000556829 /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
 		384E3B3D1B8909CC00C7B073 /* Adopt-A-Friend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adopt-A-Friend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		384E3B411B8909CC00C7B073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		384E3B421B8909CC00C7B073 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,8 +53,8 @@
 		384E3B591B8909CC00C7B073 /* Adopt-A-FriendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adopt-A-FriendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		384E3B5E1B8909CD00C7B073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		384E3B5F1B8909CD00C7B073 /* Adopt_A_FriendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Adopt_A_FriendTests.m; sourceTree = "<group>"; };
-		384E3B6B1B890C3100C7B073 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
-		384E3B6C1B890C3100C7B073 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		384E3B6B1B890C3100C7B073 /* Intro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intro.h; sourceTree = "<group>"; };
+		384E3B6C1B890C3100C7B073 /* Intro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intro.m; sourceTree = "<group>"; };
 		384E3B6E1B890C6600C7B073 /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		384E3B6F1B890C6600C7B073 /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		384E3B711B89115800C7B073 /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
@@ -147,10 +150,10 @@
 		384E3B691B890BB700C7B073 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				384E3B441B8909CC00C7B073 /* AppDelegate.h */,
-				384E3B451B8909CC00C7B073 /* AppDelegate.m */,
-				384E3B6B1B890C3100C7B073 /* IntroViewController.h */,
-				384E3B6C1B890C3100C7B073 /* IntroViewController.m */,
+				384E3B4A1B8909CC00C7B073 /* Start.h */,
+				384E3B4B1B8909CC00C7B073 /* Start.m */,
+				384E3B6B1B890C3100C7B073 /* Intro.h */,
+				384E3B6C1B890C3100C7B073 /* Intro.m */,
 				384E3B6E1B890C6600C7B073 /* Home.h */,
 				384E3B6F1B890C6600C7B073 /* Home.m */,
 				384E3B711B89115800C7B073 /* Register.h */,
@@ -168,8 +171,10 @@
 		384E3B6A1B890BBE00C7B073 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				384E3B4A1B8909CC00C7B073 /* Start.h */,
-				384E3B4B1B8909CC00C7B073 /* Start.m */,
+				384E3B441B8909CC00C7B073 /* AppDelegate.h */,
+				384E3B451B8909CC00C7B073 /* AppDelegate.m */,
+				384CE6601B8BF99000556829 /* Declarations.h */,
+				384CE6611B8BF99000556829 /* Declarations.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -287,13 +292,14 @@
 			files = (
 				384E3B461B8909CC00C7B073 /* AppDelegate.m in Sources */,
 				384E3B431B8909CC00C7B073 /* main.m in Sources */,
+				384CE6621B8BF99000556829 /* Declarations.m in Sources */,
 				384E3B701B890C6600C7B073 /* Home.m in Sources */,
 				384E3B4C1B8909CC00C7B073 /* Start.m in Sources */,
 				384E3B7C1B8912B200C7B073 /* MyDogs.m in Sources */,
 				384E3B811B8912EF00C7B073 /* cellDog.m in Sources */,
 				384E3B791B89128A00C7B073 /* AddDog.m in Sources */,
 				384E3B491B8909CC00C7B073 /* Adopt_A_Friend.xcdatamodeld in Sources */,
-				384E3B6D1B890C3100C7B073 /* IntroViewController.m in Sources */,
+				384E3B6D1B890C3100C7B073 /* Intro.m in Sources */,
 				384E3B731B89115800C7B073 /* Register.m in Sources */,
 				384E3B761B89123400C7B073 /* MainPage.m in Sources */,
 			);
@@ -490,6 +496,7 @@
 				384E3B651B8909CD00C7B073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		384E3B661B8909CD00C7B073 /* Build configuration list for PBXNativeTarget "Adopt-A-FriendTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +505,7 @@
 				384E3B681B8909CD00C7B073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
