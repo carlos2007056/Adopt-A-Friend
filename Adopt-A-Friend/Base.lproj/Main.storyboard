@@ -27,6 +27,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnRegisterPressed:" destination="qzb-Pg-Urq" eventType="touchUpInside" id="NEz-rj-NTv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="4MS-Ig-eJv">
                                 <rect key="frame" x="219" y="414" width="43" height="30"/>
@@ -34,10 +37,17 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnLoginPressed:" destination="qzb-Pg-Urq" eventType="touchUpInside" id="kfG-nX-46w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="lblBtnLogin" destination="4MS-Ig-eJv" id="xMJ-Vg-Zyk"/>
+                        <outlet property="lblBtnRegister" destination="lgH-qY-6WP" id="Il2-1H-Z9q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rs5-UK-Qtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,6 +414,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="lblEmail" destination="Uxz-Pd-txI" id="ZIl-gi-V4V"/>
+                        <outlet property="lblPassword" destination="MM2-ru-cjA" id="U20-AA-saw"/>
+                        <outlet property="lblPasswordConfirm" destination="x0J-f9-yHp" id="pDe-5l-w2M"/>
                         <outlet property="svRegister" destination="cCz-9G-Lw6" id="htP-0R-HEq"/>
                         <outlet property="txtDate" destination="9Z9-h8-R1e" id="E5D-Ci-L3M"/>
                         <outlet property="txtEmail" destination="d19-RH-k4O" id="TnT-6d-ukp"/>
@@ -491,6 +504,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbx-rk-37F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1339" y="341"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="ZeL-zg-Ge4">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="H8F-Tc-142" customClass="Login" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y7H-Mb-AEe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="8ya-5V-Cnd">
+                                <rect key="frame" x="39" y="150" width="241" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="GyK-37-S9G">
+                                <rect key="frame" x="39" y="228" width="241" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OJI-93-jBk">
+                                <rect key="frame" x="125" y="310" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ingresar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="77c-I8-hU7">
+                                <rect key="frame" x="134" y="121" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrasena" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tWd-aM-DwZ">
+                                <rect key="frame" x="114" y="207" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGa-2L-8t8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="953"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PJf-hX-xXn">
