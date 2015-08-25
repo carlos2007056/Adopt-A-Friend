@@ -28,6 +28,9 @@ static int iKeyboardHeight = 100;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initController];
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.center = CGPointMake(160.0, 110.0);
+    [self.view addSubview:loginButton];
 }
 
 - (void)didReceiveMemoryWarning {

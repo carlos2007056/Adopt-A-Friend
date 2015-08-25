@@ -22,9 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
         [self initController];
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
+
 }
 
 
@@ -35,7 +33,7 @@
 }
 
 - (void)initController {
-    [self playVideo];
+
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -51,26 +49,7 @@
     self.lblBtnRegister.layer.cornerRadius   = 8;
 }
 
-/**********************************************************************************************/
-#pragma mark - Video method
-/**********************************************************************************************/
--(void)playVideo {
-    //Play video
-    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"people" ofType:@"mp4"];
-    NSURL *videoUrl     = [NSURL fileURLWithPath:videoPath];
-    
-    self.moviePlayer    =[[MPMoviePlayerController alloc] initWithContentURL:videoUrl];
-    [self.moviePlayer.view setFrame:CGRectMake(0, 0, 1136, 640)];
-    
-    [self.moviePlayer prepareToPlay];
-    [self.moviePlayer setShouldAutoplay:YES];
-    [self.moviePlayer setRepeatMode:MPMovieRepeatModeOne];
-    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
-    [self.vVideo addSubview:self.moviePlayer.view];
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification object:[UIApplication sharedApplication] queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-        [self.moviePlayer play];
-    }];
-}
+
 /**********************************************************************************************/
 #pragma mark - Action methods
 /**********************************************************************************************/
