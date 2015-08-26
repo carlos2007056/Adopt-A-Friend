@@ -7,6 +7,12 @@
 //
 
 #import "MainPage.h"
+#import "Register.h"
+#import "Login.h"
+#import "Declarations.h"
+#import "AddDog.h"
+#import "Swype.h"
+
 
 @interface MainPage ()
 
@@ -33,5 +39,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)btnAddDogPressed:(id)sender {
+    AddDog *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AddDog"];
+    
+    [self presentViewController:viewController animated:YES completion:nil];
+    
+}
+
+- (IBAction)btnFindDogPressed:(id)sender {
+    Swype *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Swype"];
+    
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
 
 @end

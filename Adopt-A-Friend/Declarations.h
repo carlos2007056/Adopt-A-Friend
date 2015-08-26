@@ -8,11 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+//panes in tutorial
 extern NSUserDefaults   *mUserDefaults;
 extern NSMutableArray   *maIntroTitles;
 extern NSMutableArray   *maIntroImgs;
 extern NSMutableArray   *maTeams;
 extern NSMutableArray   *maImgsTeams;
+
+//dogs
+extern int miCharacterIndex;
+
+extern NSMutableArray *maNames;
+extern NSMutableArray *maAges;
+extern NSMutableArray *maImgs;
+extern NSMutableArray *maBreeds;
+extern NSMutableArray *maDescriptions;
+//dogs cont
+extern NSString *sName;
+extern NSString *sBreed;
+extern NSString *sAge;
+extern NSString *sDesc;
 
 @interface Declarations : NSObject
 

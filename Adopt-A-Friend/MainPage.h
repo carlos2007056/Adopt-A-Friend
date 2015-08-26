@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MainPage : UIViewController
+- (IBAction)btnAddDogPressed:(id)sender;
+- (IBAction)btnFindDogPressed:(id)sender;
 
 @end

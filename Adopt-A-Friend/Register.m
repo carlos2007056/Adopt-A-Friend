@@ -79,8 +79,7 @@ static int iKeyboardHeight = 100;
 - (IBAction)btnMenuPressed:(id)sender {
 }
 //-------------------------------------------------------------------------------
-- (IBAction)btnGooglePressed:(id)sender {
-}
+
 //-------------------------------------------------------------------------------
 - (IBAction)btnFacebookPressed:(id)sender {
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];

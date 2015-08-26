@@ -16,6 +16,20 @@ NSMutableArray      *maIntroImgs;
 NSMutableArray      *maTeams;
 NSMutableArray      *maImgsTeams;
 
+//dogs
+int miCharacterIndex;
+
+NSMutableArray *maNames;
+NSMutableArray *maAges;
+NSMutableArray *maImgs;
+NSMutableArray *maBreeds;
+NSMutableArray *maDescriptions;
+//dogs cont
+NSString *sName;
+NSString *sBreed;
+NSString *sAge;
+NSString *sDesc;
+
 @implementation Declarations
 
 @end

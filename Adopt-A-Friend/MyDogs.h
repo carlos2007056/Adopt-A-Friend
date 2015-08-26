@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyDogs : UIViewController
+@interface MyDogs : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tabla;
+- (IBAction)btnBackPressed:(id)sender;
 
 @end
