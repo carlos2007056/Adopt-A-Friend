@@ -122,8 +122,8 @@ static int iKeyboardHeight = 100;
     print(NSLog(@"stName = %@", stName));
     
     self.txtName.text           = str1;
-    self.txtFirstSurname.text   = str2;
-    self.txtSecondSurname.text  = str3;
+    self.txtAlias.text   = str2;
+    self.txtSurname.text  = str3;
 }
 
 /**********************************************************************************************/
@@ -147,10 +147,10 @@ static int iKeyboardHeight = 100;
     if (textField == self.txtName) {
         [self.svRegister setContentOffset: CGPointMake(0, self.vDataGroup1.frame.origin.y + 20)  animated:YES];
     }
-    else if (textField == self.txtFirstSurname) {
+    else if (textField == self.txtAlias) {
         [self.svRegister setContentOffset: CGPointMake(0, self.vDataGroup1.frame.origin.y + 20)  animated:YES];
     }
-    else if (textField == self.txtSecondSurname) {
+    else if (textField == self.txtSurname) {
         [self.svRegister setContentOffset: CGPointMake(0, self.vDataGroup2.frame.origin.y - 10)  animated:YES];
     }
     else if (textField == self.txtEmail) {
@@ -221,12 +221,12 @@ static int iKeyboardHeight = 100;
     print(NSLog(@"textFieldShouldReturn"))
     if(textField.returnKeyType == UIReturnKeyNext) {
         if (textField == self.txtName) {
-            [self.txtFirstSurname becomeFirstResponder];
+            [self.txtAlias becomeFirstResponder];
         }
-        else if (textField == self.txtFirstSurname) {
-            [self.txtSecondSurname becomeFirstResponder];
+        else if (textField == self.txtAlias) {
+            [self.txtSurname becomeFirstResponder];
         }
-        else if (textField == self.txtSecondSurname) {
+        else if (textField == self.txtSurname) {
             //[self.txtSecondSurname becomeFirstResponder];
             [textField resignFirstResponder];
             //self.vPicker.hidden = NO;
@@ -259,9 +259,9 @@ static int iKeyboardHeight = 100;
 
 -(void)dismissKeyboard {
     [_txtName resignFirstResponder];
-    [_txtFirstSurname resignFirstResponder];
-    [_txtSecondSurname resignFirstResponder];
-    [_txtDate resignFirstResponder];
+    [_txtAlias resignFirstResponder];
+    [_txtSurname resignFirstResponder];
+    [_txtApellidoMaterno resignFirstResponder];
     [_txtEmail resignFirstResponder];
     [_txtPhone resignFirstResponder];
     [_txtPassword resignFirstResponder];

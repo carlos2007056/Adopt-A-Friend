@@ -18,8 +18,8 @@
 @interface Register : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *txtName;
-@property (strong, nonatomic) IBOutlet UITextField *txtFirstSurname;
-@property (strong, nonatomic) IBOutlet UITextField *txtSecondSurname;
+@property (strong, nonatomic) IBOutlet UITextField *txtAlias;
+@property (strong, nonatomic) IBOutlet UITextField *txtSurname;
 @property (strong, nonatomic) IBOutlet UITextField *txtEmail;
 @property (strong, nonatomic) IBOutlet UITextField *txtPhone;
 @property (strong, nonatomic) IBOutlet UITextField *txtPassword;
@@ -29,7 +29,7 @@
 @property (strong, nonatomic) IBOutlet UIView *vDataGroup3;
 @property (strong, nonatomic) IBOutlet UIView *vDataGroup4;
 @property (strong, nonatomic) IBOutlet UIScrollView *svRegister;
-@property (strong, nonatomic) IBOutlet UITextField *txtDate;
+@property (strong, nonatomic) IBOutlet UITextField *txtApellidoMaterno;
 @property (strong, nonatomic) IBOutlet UILabel *lblPassword;
 @property (strong, nonatomic) IBOutlet UILabel *lblPasswordConfirm;
 @property (strong, nonatomic) IBOutlet UILabel *lblEmail;

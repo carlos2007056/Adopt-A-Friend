@@ -428,14 +428,14 @@
                         <outlet property="lblPassword" destination="MM2-ru-cjA" id="U20-AA-saw"/>
                         <outlet property="lblPasswordConfirm" destination="x0J-f9-yHp" id="pDe-5l-w2M"/>
                         <outlet property="svRegister" destination="cCz-9G-Lw6" id="htP-0R-HEq"/>
-                        <outlet property="txtDate" destination="9Z9-h8-R1e" id="E5D-Ci-L3M"/>
+                        <outlet property="txtAlias" destination="G76-YR-xU3" id="3Ss-4B-gf2"/>
+                        <outlet property="txtApellidoMaterno" destination="9Z9-h8-R1e" id="q8a-AY-uVL"/>
                         <outlet property="txtEmail" destination="d19-RH-k4O" id="TnT-6d-ukp"/>
-                        <outlet property="txtFirstSurname" destination="G76-YR-xU3" id="IQx-eD-gjU"/>
                         <outlet property="txtName" destination="0WM-d6-Ud5" id="IYZ-Ao-piu"/>
                         <outlet property="txtPassword" destination="0q5-6z-JNz" id="Ou5-FI-0Eg"/>
                         <outlet property="txtPasswordConfirm" destination="keC-6i-kkD" id="6Cp-E5-ss5"/>
                         <outlet property="txtPhone" destination="6xa-4i-UUW" id="f6l-cS-BLY"/>
-                        <outlet property="txtSecondSurname" destination="2QW-hD-Jvf" id="31H-fT-eqm"/>
+                        <outlet property="txtSurname" destination="2QW-hD-Jvf" id="QPr-qp-KnV"/>
                         <outlet property="vDataGroup1" destination="Em2-Oc-ARK" id="yen-q6-vS6"/>
                         <outlet property="vDataGroup2" destination="czW-Q7-tO8" id="H6I-Bk-l5m"/>
                         <outlet property="vDataGroup3" destination="7OY-U6-IPV" id="PTb-hM-6W5"/>
