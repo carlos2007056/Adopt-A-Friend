@@ -11,5 +11,6 @@
 @interface MainPage : UIViewController
 - (IBAction)btnAddDogPressed:(id)sender;
 - (IBAction)btnFindDogPressed:(id)sender;
+- (IBAction)btnMyDogsPressed:(id)sender;
 
 @end

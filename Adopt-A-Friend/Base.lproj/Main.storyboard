@@ -247,21 +247,6 @@
                                                     <outlet property="delegate" destination="Pfv-98-idc" id="Htt-Vf-SvD"/>
                                                 </connections>
                                             </textField>
-                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="9Z9-h8-R1e" userLabel="txtData2">
-                                                <rect key="frame" x="180" y="20" width="120" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="Pfv-98-idc" id="vDa-pb-eyM"/>
-                                                </connections>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jJb-81-NkG" userLabel="lblDate">
-                                                <rect key="frame" x="180" y="20" width="120" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="14"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido Paterno" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="etr-Tx-Ebp" userLabel="lblFirstSurname">
                                                 <rect key="frame" x="8" y="0.0" width="150" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -276,6 +261,12 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="a8N-wX-G8r">
+                                                <rect key="frame" x="184" y="24" width="97" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -429,7 +420,7 @@
                         <outlet property="lblPasswordConfirm" destination="x0J-f9-yHp" id="pDe-5l-w2M"/>
                         <outlet property="svRegister" destination="cCz-9G-Lw6" id="htP-0R-HEq"/>
                         <outlet property="txtAlias" destination="G76-YR-xU3" id="3Ss-4B-gf2"/>
-                        <outlet property="txtApellidoMaterno" destination="9Z9-h8-R1e" id="q8a-AY-uVL"/>
+                        <outlet property="txtApellidoMaterno" destination="a8N-wX-G8r" id="jBi-Dy-Zko"/>
                         <outlet property="txtEmail" destination="d19-RH-k4O" id="TnT-6d-ukp"/>
                         <outlet property="txtName" destination="0WM-d6-Ud5" id="IYZ-Ao-piu"/>
                         <outlet property="txtPassword" destination="0q5-6z-JNz" id="Ou5-FI-0Eg"/>
@@ -666,6 +657,16 @@
                                     <action selector="btnFindDogPressed:" destination="Oel-eo-x5r" eventType="touchUpInside" id="ocQ-i9-gas"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fVq-Id-zk1">
+                                <rect key="frame" x="103" y="193" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My Adopted Dogs">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnMyDogsPressed:" destination="Oel-eo-x5r" eventType="touchUpInside" id="Gbp-so-zeR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -726,6 +727,7 @@
         <!--Swype-->
         <scene sceneID="PJf-hX-xXn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pyp-01-kaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Swype" id="ACZ-Uu-0ll" customClass="Swype" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j8F-IQ-28g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -744,12 +746,14 @@
                                 <state key="normal" title="Atras">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnBackPressed:" destination="ACZ-Uu-0ll" eventType="touchUpInside" id="qIW-1r-wZd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pyp-01-kaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1723" y="696"/>
         </scene>

@@ -10,4 +10,6 @@
 
 @interface Swype : UIViewController
 
+- (IBAction)btnBackPressed:(id)sender;
+
 @end

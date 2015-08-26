@@ -12,6 +12,7 @@
 #import "Declarations.h"
 #import "AddDog.h"
 #import "Swype.h"
+#import "MyDogs.h"
 
 
 @interface MainPage ()
@@ -49,6 +50,12 @@
 
 - (IBAction)btnFindDogPressed:(id)sender {
     Swype *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Swype"];
+    
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (IBAction)btnMyDogsPressed:(id)sender {
+    MyDogs *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MyDogs"];
     
     [self presentViewController:viewController animated:YES completion:nil];
 }

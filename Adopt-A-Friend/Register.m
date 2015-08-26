@@ -55,7 +55,7 @@ static int iKeyboardHeight = 100;
 #pragma mark - Action methods methods
 /**********************************************************************************************/
 - (IBAction)btnNextPressed:(id)sender {
-    if (CorrectData==0||CorrectData1==0) {
+    /*if (CorrectData==0||CorrectData1==0) {
         
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Datos Incorrectos"
                                                            message:@"Favor de completar los campos resaltados."
@@ -65,13 +65,13 @@ static int iKeyboardHeight = 100;
         [theAlert show];
         
     } else if (CorrectData==1&&CorrectData1==1)
-    {
+    {*/
         
         MainPage *welcome= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainPage"];
         [self presentViewController:welcome animated:YES completion:nil];
         
         
-    }
+    //}
     //-------------------------------------------------------------------------------
 }
 
@@ -153,6 +153,9 @@ static int iKeyboardHeight = 100;
     else if (textField == self.txtSurname) {
         [self.svRegister setContentOffset: CGPointMake(0, self.vDataGroup2.frame.origin.y - 10)  animated:YES];
     }
+    else if (textField == self.txtApellidoMaterno) {
+        [self.svRegister setContentOffset: CGPointMake(0, self.vDataGroup2.frame.origin.y - 10)  animated:YES];
+    }
     else if (textField == self.txtEmail) {
         [self.svRegister setContentOffset: CGPointMake(0, self.vDataGroup3.frame.origin.y - 10)  animated:YES];
     }
@@ -227,9 +230,14 @@ static int iKeyboardHeight = 100;
             [self.txtSurname becomeFirstResponder];
         }
         else if (textField == self.txtSurname) {
-            //[self.txtSecondSurname becomeFirstResponder];
-            [textField resignFirstResponder];
-            //self.vPicker.hidden = NO;
+            
+            [self.txtApellidoMaterno becomeFirstResponder];
+            
+        }
+        else if (textField == self.txtApellidoMaterno) {
+            
+            [self.txtEmail becomeFirstResponder];
+            
         }
         else if (textField == self.txtEmail) {
             [self.txtPhone becomeFirstResponder];
