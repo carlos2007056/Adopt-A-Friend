@@ -39,7 +39,7 @@
 }
 //-------------------------------------------------------------------------------
 - (void)initController {
-    maIntroTitles   = [[NSMutableArray alloc] initWithObjects: @"Pagina\n1", @"Pagina\n2", @"Pagina\n3", nil];
+    maIntroTitles   = [[NSMutableArray alloc] initWithObjects: @"Find Dogs \n to adopt\n", @"Add your dog \n for adoption\n2", @"Contact owners \n to retrieve dogs\n", nil];
     maIntroImgs     = [[NSMutableArray alloc] initWithObjects: @"intro_01.png", @"intro_02.png", @"intro_03.png", nil];
     
     [self createPageViews];

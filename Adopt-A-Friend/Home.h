@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface Home : UIViewController
 
+@property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
+@property (strong, nonatomic) IBOutlet UIView *vVideo;
 
 @property (strong, nonatomic) IBOutlet UIButton *lblBtnLogin;
 @property (strong, nonatomic) IBOutlet UIButton *lblBtnRegister;
