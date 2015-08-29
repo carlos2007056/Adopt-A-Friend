@@ -38,14 +38,34 @@
 }
 
 -(void)initController {
+    //save the NSArray to disk to reuse
+    //Creating a file path under iOS:
+    //Search for the app's documents directory (copy+paste from Documentation)
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    // Create the full file path by appending the desired file name
     //Initialize arrays
-    maNames         = [[NSMutableArray alloc] initWithObjects:
-                       @"Pups",
-                       @"Fluffy",
-                       @"Airbud",
-                       @"Sleddy",
-                       @"Brownie",
-                       nil];
+    
+    NSString *arrayFilemaNames = [documentsDirectory stringByAppendingPathComponent:@"maNames.dat"];
+    maNames =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaNames];
+    if(maNames == nil)
+    {
+        //Array file didn't exist... create a new one
+        maNames = [[NSMutableArray alloc] initWithCapacity:100];
+        //Fill with default values
+        maNames         = [[NSMutableArray alloc] initWithObjects:
+                           @"Pups",
+                           @"Fluffy",
+                           @"Airbud",
+                           @"Sleddy",
+                           @"Brownie",
+                           nil];
+    }
+    else{
+        maNames = [NSMutableArray arrayWithContentsOfFile:arrayFilemaNames];
+    }
+    [maNames writeToFile:arrayFilemaNames atomically:YES];
+    
     maAges          = [[NSMutableArray alloc] initWithObjects:
                        @"17",
                        @"18",
@@ -56,7 +76,7 @@
     maImgs          = [[NSMutableArray alloc] initWithObjects:
                        @"intro_01.jpg",
                        @"fluffy.jpg",
-                       @"golden.png",
+                       @"golden.jpg",
                        @"husky.jpg",
                        @"brown.jpg",
                        nil];

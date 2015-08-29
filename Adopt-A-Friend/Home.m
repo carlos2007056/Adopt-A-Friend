@@ -72,7 +72,7 @@
     NSURL *videoUrl     = [NSURL fileURLWithPath:videoPath];
     
     self.moviePlayer    =[[MPMoviePlayerController alloc] initWithContentURL:videoUrl];
-    [self.moviePlayer.view setFrame:CGRectMake(0, 0, 1136, 640)];
+    [self.moviePlayer.view setFrame:CGRectMake(0, 0, 1334, 750)];
     
     [self.moviePlayer prepareToPlay];
     [self.moviePlayer setShouldAutoplay:YES];
