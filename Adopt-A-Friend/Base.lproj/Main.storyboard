@@ -23,12 +23,14 @@
                             <view contentMode="scaleToFill" id="FfC-YT-JlZ" userLabel="vVideo">
                                 <rect key="frame" x="8" y="0.0" width="312" height="562"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" id="Mcv-ai-YGl" userLabel="vTransparency">
+                                        <rect key="frame" x="-17" y="0.0" width="329" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.69324890080000001" blue="0.47301271859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view alpha="0.5" contentMode="scaleToFill" id="Mcv-ai-YGl" userLabel="vTransparency">
-                                <rect key="frame" x="-9" y="0.0" width="329" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="G4I-Nl-DZP" userLabel="vData">
                                 <rect key="frame" x="38" y="45" width="244" height="479"/>
@@ -78,7 +80,7 @@
         <scene sceneID="9mq-U8-F1F">
             <objects>
                 <viewController storyboardIdentifier="Intro" id="MI1-TC-Gz4" customClass="Intro" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J64-AU-bLY">
+                    <view key="view" alpha="0.29999999999999999" contentMode="scaleToFill" id="J64-AU-bLY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -99,7 +101,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="43O-x4-bcC">
                                 <rect key="frame" x="42" y="473" width="246" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="OK!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -111,7 +113,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.69324890075413126" blue="0.47301271864634098" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="btnIntro" destination="43O-x4-bcC" id="4hb-X9-6xE"/>
@@ -145,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="g1l-wf-6Wo" userLabel="vTop">
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" id="g1l-wf-6Wo" userLabel="vTop">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -171,7 +173,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.69324890080000001" blue="0.47301271859999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="cCz-9G-Lw6" userLabel="svRegister">
                                 <rect key="frame" x="0.0" y="64" width="320" height="512"/>
@@ -462,7 +464,7 @@
         <scene sceneID="aoI-eX-Ofr">
             <objects>
                 <viewController storyboardIdentifier="MyDogs" id="TBb-VX-spO" customClass="MyDogs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6TR-md-8wg">
+                    <view key="view" alpha="0.29999999999999999" contentMode="scaleToFill" id="6TR-md-8wg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -486,7 +488,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.69324890080000001" blue="0.47301271859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="tabla" destination="kFr-E6-bnF" id="tVE-uT-ObZ"/>
@@ -500,7 +502,7 @@
         <scene sceneID="IEc-Xx-Sq7">
             <objects>
                 <viewController storyboardIdentifier="AddDog" id="lEd-cz-fal" customClass="AddDog" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xWS-to-m2n">
+                    <view key="view" alpha="0.29999999999999999" contentMode="scaleToFill" id="xWS-to-m2n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -564,7 +566,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.69324890080000001" blue="0.47301271859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="b3x-Hn-NrW" id="6py-iK-4NS"/>
@@ -582,7 +584,7 @@
         <scene sceneID="ejX-Ly-Jzd">
             <objects>
                 <viewController storyboardIdentifier="DogDetails" id="MO1-hl-gjD" customClass="DogDetails" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kxb-dO-c3C">
+                    <view key="view" alpha="0.29999999999999999" contentMode="scaleToFill" id="Kxb-dO-c3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -629,7 +631,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.69324890080000001" blue="0.47301271859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="imgDog" destination="AE8-Vn-C4n" id="Ekw-lH-DP7"/>
@@ -647,7 +649,7 @@
         <scene sceneID="NOM-2p-ULA">
             <objects>
                 <viewController storyboardIdentifier="MainPage" id="Oel-eo-x5r" customClass="MainPage" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VYl-HX-p0d">
+                    <view key="view" alpha="0.29999999999999999" contentMode="scaleToFill" id="VYl-HX-p0d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -689,7 +691,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.69324890080000001" blue="0.47301271859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbx-rk-37F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -749,7 +751,7 @@
         <scene sceneID="PJf-hX-xXn">
             <objects>
                 <viewController storyboardIdentifier="Swype" id="ACZ-Uu-0ll" customClass="Swype" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="j8F-IQ-28g">
+                    <view key="view" alpha="0.29999999999999999" contentMode="scaleToFill" id="j8F-IQ-28g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -771,7 +773,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.69324890080000001" blue="0.47301271859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyp-01-kaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
