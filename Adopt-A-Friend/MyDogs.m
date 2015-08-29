@@ -40,11 +40,11 @@
 -(void)initController {
     //Initialize arrays
     maNames         = [[NSMutableArray alloc] initWithObjects:
-                       @"Daenerys Targaryen",
-                       @"Jon Snow",
-                       @"Tyrion Lannister",
-                       @"Joffrey Baratheon",
-                       @"Khal Drogo",
+                       @"Pups",
+                       @"Fluffy",
+                       @"Airbud",
+                       @"Sleddy",
+                       @"Brownie",
                        nil];
     maAges          = [[NSMutableArray alloc] initWithObjects:
                        @"17",
@@ -54,18 +54,18 @@
                        @"25",
                        nil];
     maImgs          = [[NSMutableArray alloc] initWithObjects:
-                       @"dany.jpg",
-                       @"jonsnow.jpeg",
-                       @"tyrion.png",
-                       @"joffrey.png",
-                       @"drogo.png",
+                       @"intro_01.jpg",
+                       @"fluffy.jpg",
+                       @"golden.png",
+                       @"husky.jpg",
+                       @"brown.jpg",
                        nil];
     maBreeds       = [[NSMutableArray alloc] initWithObjects:
-                       @"Dany",
-                       @"You know Nothing",
-                       @"Small",
-                       @"Puppet King",
-                       @"Drogo",
+                       @"Black",
+                       @"Fluffy",
+                       @"Golden",
+                       @"Husky",
+                       @"Golden",
                        nil];
     maDescriptions = [[NSMutableArray alloc] initWithObjects:
                       @"Daenerys is the only daughter and youngest child of King Aerys II Targaryen, the Mad King, and his sister-wife Rhaella.",
