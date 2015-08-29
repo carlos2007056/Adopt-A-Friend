@@ -68,7 +68,7 @@
 /**********************************************************************************************/
 -(void)playVideo {
     //Play video
-    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"people" ofType:@"gif"];
+    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"welcome" ofType:@"gif"];
     NSURL *videoUrl     = [NSURL fileURLWithPath:videoPath];
     
     self.moviePlayer    =[[MPMoviePlayerController alloc] initWithContentURL:videoUrl];

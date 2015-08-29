@@ -33,10 +33,10 @@
 		384E3B7C1B8912B200C7B073 /* MyDogs.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B7B1B8912B200C7B073 /* MyDogs.m */; };
 		384E3B811B8912EF00C7B073 /* cellDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B7F1B8912EF00C7B073 /* cellDog.m */; };
 		384E3B821B8912EF00C7B073 /* cellDog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384E3B801B8912EF00C7B073 /* cellDog.xib */; };
-		385019001B920A20004F313D /* intro_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 385018FD1B920A20004F313D /* intro_01.png */; };
-		385019011B920A20004F313D /* intro_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 385018FE1B920A20004F313D /* intro_02.png */; };
-		385019021B920A20004F313D /* intro_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 385018FF1B920A20004F313D /* intro_03.png */; };
 		385019041B920CA0004F313D /* welcome.gif in Resources */ = {isa = PBXBuildFile; fileRef = 385019031B920CA0004F313D /* welcome.gif */; };
+		385019081B920F5F004F313D /* intro_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 385019051B920F5F004F313D /* intro_01.jpg */; };
+		3850190A1B920F5F004F313D /* intro_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 385019071B920F5F004F313D /* intro_03.jpg */; };
+		3850190C1B92103F004F313D /* intro_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3850190B1B92103F004F313D /* intro_02.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,10 +92,10 @@
 		384E3B7E1B8912EF00C7B073 /* cellDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellDog.h; sourceTree = "<group>"; };
 		384E3B7F1B8912EF00C7B073 /* cellDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellDog.m; sourceTree = "<group>"; };
 		384E3B801B8912EF00C7B073 /* cellDog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellDog.xib; sourceTree = "<group>"; };
-		385018FD1B920A20004F313D /* intro_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_01.png; sourceTree = "<group>"; };
-		385018FE1B920A20004F313D /* intro_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_02.png; sourceTree = "<group>"; };
-		385018FF1B920A20004F313D /* intro_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_03.png; sourceTree = "<group>"; };
 		385019031B920CA0004F313D /* welcome.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = welcome.gif; sourceTree = "<group>"; };
+		385019051B920F5F004F313D /* intro_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro_01.jpg; sourceTree = "<group>"; };
+		385019071B920F5F004F313D /* intro_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro_03.jpg; sourceTree = "<group>"; };
+		3850190B1B92103F004F313D /* intro_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro_02.jpg; sourceTree = "<group>"; };
 		3A41CC808CB714616585F2D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Adopt-A-Friend/Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7FEE06F63C3482761F149E6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA430D2B86861B5F86AE86B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Adopt-A-Friend/Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -242,9 +242,9 @@
 			isa = PBXGroup;
 			children = (
 				385019031B920CA0004F313D /* welcome.gif */,
-				385018FD1B920A20004F313D /* intro_01.png */,
-				385018FE1B920A20004F313D /* intro_02.png */,
-				385018FF1B920A20004F313D /* intro_03.png */,
+				385019051B920F5F004F313D /* intro_01.jpg */,
+				3850190B1B92103F004F313D /* intro_02.jpg */,
+				385019071B920F5F004F313D /* intro_03.jpg */,
 			);
 			name = imagesVideos;
 			sourceTree = "<group>";
@@ -351,13 +351,13 @@
 			files = (
 				384CE66D1B8C0B3900556829 /* Podfile in Resources */,
 				384E3B4F1B8909CC00C7B073 /* Main.storyboard in Resources */,
-				385019011B920A20004F313D /* intro_02.png in Resources */,
+				3850190C1B92103F004F313D /* intro_02.jpg in Resources */,
+				3850190A1B920F5F004F313D /* intro_03.jpg in Resources */,
 				385019041B920CA0004F313D /* welcome.gif in Resources */,
 				384E3B541B8909CC00C7B073 /* LaunchScreen.xib in Resources */,
-				385019001B920A20004F313D /* intro_01.png in Resources */,
-				385019021B920A20004F313D /* intro_03.png in Resources */,
 				384E3B821B8912EF00C7B073 /* cellDog.xib in Resources */,
 				384E3B511B8909CC00C7B073 /* Images.xcassets in Resources */,
+				385019081B920F5F004F313D /* intro_01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
