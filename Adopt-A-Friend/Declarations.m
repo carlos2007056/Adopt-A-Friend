@@ -30,6 +30,15 @@ NSString *sBreed;
 NSString *sAge;
 NSString *sDesc;
 
+//user data
+NSMutableArray *maUserName;
+NSMutableArray *maUserAlias;
+NSMutableArray *maUserSurname;
+NSMutableArray *maUserSecondSurname;
+NSMutableArray *maUserEmail;
+NSMutableArray *maUserPhone;
+NSMutableArray *maUserPassword;
+
 @implementation Declarations
 
 @end

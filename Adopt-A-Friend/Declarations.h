@@ -29,6 +29,15 @@ extern NSString *sBreed;
 extern NSString *sAge;
 extern NSString *sDesc;
 
+//registered users
+extern NSMutableArray *maUserName;
+extern NSMutableArray *maUserAlias;
+extern NSMutableArray *maUserSurname;
+extern NSMutableArray *maUserSecondSurname;
+extern NSMutableArray *maUserEmail;
+extern NSMutableArray *maUserPhone;
+extern NSMutableArray *maUserPassword;
+
 @interface Declarations : NSObject
 
 @end

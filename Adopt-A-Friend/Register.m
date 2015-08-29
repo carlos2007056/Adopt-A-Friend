@@ -5,7 +5,7 @@
 //  Created by Elias Vltaliano Vidaurre Davila on 8/22/15.
 //  Copyright (c) 2015 vita. All rights reserved.
 //
-
+#import "Declarations.h"
 #import "Register.h"
 #import "MainPage.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -55,6 +55,150 @@ static int iKeyboardHeight = 100;
 #pragma mark - Action methods methods
 /**********************************************************************************************/
 - (IBAction)btnNextPressed:(id)sender {
+    //save data
+    
+    //save the NSArray to disk to reuse
+    //Creating a file path under iOS:
+    //Search for the app's documents directory (copy+paste from Documentation)
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    // Create the full file path by appending the desired file name
+    
+    
+    //maUserName
+    NSString *arrayFilemaNames = [documentsDirectory stringByAppendingPathComponent:@"maUserName.dat"];
+    maUserName =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaNames];
+    if(maUserName == nil)
+    {
+        //Array file didn't exist... create a new one
+        maUserName = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        //Fill with default values
+        maUserName = [[NSMutableArray alloc] initWithObjects:
+                  _txtName.text,
+                   nil
+                   ];
+    }
+    else{
+        maUserName = [NSMutableArray arrayWithContentsOfFile:arrayFilemaNames];
+    }
+    [maUserName writeToFile:arrayFilemaNames atomically:YES];
+    
+    //maUserAlias
+    NSString *arrayFileAlias = [documentsDirectory stringByAppendingPathComponent:@"maUserAlias.dat"];
+    maUserAlias =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFileAlias];
+    if(maUserAlias == nil)
+    {
+        //Array file didn't exist... create a new one
+        maUserAlias = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        //Fill with default values
+        maUserAlias = [[NSMutableArray alloc] initWithObjects:
+                      _txtAlias.text,
+                      nil
+                      ];
+    }
+    else{
+        maUserAlias = [NSMutableArray arrayWithContentsOfFile:arrayFileAlias];
+    }
+    [maUserAlias writeToFile:arrayFileAlias atomically:YES];
+    
+    //maUserSurname
+    NSString *arrayFileSurname = [documentsDirectory stringByAppendingPathComponent:@"maUserSurname.dat"];
+    maUserSurname =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFileSurname];
+    if(maUserSurname == nil)
+    {
+        //Array file didn't exist... create a new one
+        maUserSurname = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        //Fill with default values
+        maUserSurname = [[NSMutableArray alloc] initWithObjects:
+                       _txtSurname.text,
+                       nil
+                       ];
+    }
+    else{
+        maUserSurname = [NSMutableArray arrayWithContentsOfFile:arrayFileSurname];
+    }
+    [maUserSurname writeToFile:arrayFileSurname atomically:YES];
+    
+    //maSecondSurname
+    NSString *arrayFileUserSecondSurname = [documentsDirectory stringByAppendingPathComponent:@"maUserSecondSurname.dat"];
+    maUserSecondSurname =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFileUserSecondSurname];
+    if(maUserSecondSurname == nil)
+    {
+        //Array file didn't exist... create a new one
+        maUserSecondSurname = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        //Fill with default values
+        maUserSecondSurname = [[NSMutableArray alloc] initWithObjects:
+                         _txtApellidoMaterno.text,
+                         nil
+                         ];
+    }
+    else{
+        maUserSecondSurname = [NSMutableArray arrayWithContentsOfFile:arrayFileUserSecondSurname];
+    }
+    [maUserSecondSurname writeToFile:arrayFileUserSecondSurname atomically:YES];
+    
+    //maUserEmail
+    NSString *arrayFileUserEmail = [documentsDirectory stringByAppendingPathComponent:@"maUserEmail.dat"];
+    maUserEmail =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFileUserEmail];
+    if(maUserEmail == nil)
+    {
+        //Array file didn't exist... create a new one
+        maUserEmail = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        //Fill with default values
+        maUserEmail = [[NSMutableArray alloc] initWithObjects:
+                               _txtEmail.text,
+                               nil
+                               ];
+    }
+    else{
+        maUserEmail = [NSMutableArray arrayWithContentsOfFile:arrayFileUserEmail];
+    }
+    [maUserEmail writeToFile:arrayFileUserEmail atomically:YES];
+    
+    //maUserPhone
+    NSString *arrayFileUserPhone = [documentsDirectory stringByAppendingPathComponent:@"maUserPhone.dat"];
+    maUserPhone =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFileUserPhone];
+    if(maUserPhone == nil)
+    {
+        //Array file didn't exist... create a new one
+        maUserPhone = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        //Fill with default values
+        maUserPhone = [[NSMutableArray alloc] initWithObjects:
+                       _txtPhone.text,
+                       nil
+                       ];
+    }
+    else{
+        maUserPhone = [NSMutableArray arrayWithContentsOfFile:arrayFileUserPhone];
+    }
+    [maUserPhone writeToFile:arrayFileUserPhone atomically:YES];
+    
+    //maUserPassword
+    NSString *arrayFileUserPassword = [documentsDirectory stringByAppendingPathComponent:@"maUserPassword.dat"];
+    maUserPassword =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFileUserPassword];
+    if(maUserPassword == nil)
+    {
+        //Array file didn't exist... create a new one
+        maUserPassword = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        //Fill with default values
+        maUserPassword = [[NSMutableArray alloc] initWithObjects:
+                       _txtPassword.text,
+                       nil
+                       ];
+    }
+    else{
+        maUserPassword = [NSMutableArray arrayWithContentsOfFile:arrayFileUserPassword];
+    }
+    [maUserPassword writeToFile:arrayFileUserPassword atomically:YES];
+    
+    //end save data
     /*if (CorrectData==0||CorrectData1==0) {
         
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Datos Incorrectos"
@@ -72,6 +216,7 @@ static int iKeyboardHeight = 100;
         
         
     //}
+    
     //-------------------------------------------------------------------------------
 }
 
@@ -121,9 +266,9 @@ static int iKeyboardHeight = 100;
     NSString *str3      = [items objectAtIndex:2];
     print(NSLog(@"stName = %@", stName));
     
-    self.txtName.text           = str1;
-    self.txtAlias.text   = str2;
-    self.txtSurname.text  = str3;
+    self.txtName.text             = str1;
+    self.txtSurname.text          = str2;
+    self.txtApellidoMaterno.text  = str3;
 }
 
 /**********************************************************************************************/
@@ -168,7 +313,7 @@ static int iKeyboardHeight = 100;
 
 - (void)textFieldDidChange:(UITextField *)textField {
     
-    if ([_txtPassword.text isEqualToString: _txtPasswordConfirm.text]) {
+    if ([_txtPassword.text isEqualToString: _txtPasswordConfirm.text] && _txtPassword.text.length > 0) {
         _lblPassword.textColor = [UIColor greenColor];
         _lblPasswordConfirm.textColor = [UIColor greenColor];
         
