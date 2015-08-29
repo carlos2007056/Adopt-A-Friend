@@ -21,7 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        [self initController];
+    [self initController];
+    UIImage *backgroundImage = [UIImage imageNamed:@"welcome.jpg"];
+    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
+    backgroundImageView.image=backgroundImage;
+    [self.view insertSubview:backgroundImageView atIndex:0];
 
 }
 
@@ -33,7 +37,7 @@
 }
 
 - (void)initController {
-    [self playVideo];
+    //[self playVideo];
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];

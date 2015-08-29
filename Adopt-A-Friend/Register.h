@@ -34,6 +34,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblPasswordConfirm;
 @property (strong, nonatomic) IBOutlet UILabel *lblEmail;
 
+- (IBAction)btnBackPressed:(id)sender;
 
 - (IBAction)btnNextPressed:(id)sender;
 

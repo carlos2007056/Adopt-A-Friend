@@ -17,6 +17,7 @@
 		384D01791B8D4F9F00816919 /* Swype.m in Sources */ = {isa = PBXBuildFile; fileRef = 384D01781B8D4F9F00816919 /* Swype.m */; };
 		384D017C1B8D4FD400816919 /* DogDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 384D017B1B8D4FD400816919 /* DogDetails.m */; };
 		384D017E1B8D517F00816919 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384D017D1B8D517F00816919 /* MobileCoreServices.framework */; };
+		384DBF431B9236DC00D6E079 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 384DBF421B9236DC00D6E079 /* welcome.jpg */; };
 		384E3B431B8909CC00C7B073 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B421B8909CC00C7B073 /* main.m */; };
 		384E3B461B8909CC00C7B073 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B451B8909CC00C7B073 /* AppDelegate.m */; };
 		384E3B491B8909CC00C7B073 /* Adopt_A_Friend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 384E3B471B8909CC00C7B073 /* Adopt_A_Friend.xcdatamodeld */; };
@@ -68,6 +69,7 @@
 		384D017A1B8D4FD400816919 /* DogDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogDetails.h; sourceTree = "<group>"; };
 		384D017B1B8D4FD400816919 /* DogDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogDetails.m; sourceTree = "<group>"; };
 		384D017D1B8D517F00816919 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		384DBF421B9236DC00D6E079 /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpg; sourceTree = "<group>"; };
 		384E3B3D1B8909CC00C7B073 /* Adopt-A-Friend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adopt-A-Friend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		384E3B411B8909CC00C7B073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		384E3B421B8909CC00C7B073 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				385019111B921D5E004F313D /* brown.jpg */,
+				384DBF421B9236DC00D6E079 /* welcome.jpg */,
 				385019121B921D5E004F313D /* fluffy.jpg */,
 				385019131B921D5E004F313D /* golden.jpg */,
 				385019141B921D5E004F313D /* husky.jpg */,
@@ -370,6 +373,7 @@
 				385019101B921A91004F313D /* welcome.mp4 in Resources */,
 				384CE66D1B8C0B3900556829 /* Podfile in Resources */,
 				384E3B4F1B8909CC00C7B073 /* Main.storyboard in Resources */,
+				384DBF431B9236DC00D6E079 /* welcome.jpg in Resources */,
 				3850190C1B92103F004F313D /* intro_02.jpg in Resources */,
 				3850190A1B920F5F004F313D /* intro_03.jpg in Resources */,
 				384E3B541B8909CC00C7B073 /* LaunchScreen.xib in Resources */,

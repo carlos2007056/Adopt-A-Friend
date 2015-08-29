@@ -276,6 +276,8 @@ static int iKeyboardHeight = 100;
     [_txtPasswordConfirm resignFirstResponder];
 }
 
-
+- (IBAction)btnBackPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

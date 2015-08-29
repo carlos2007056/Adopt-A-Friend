@@ -60,5 +60,8 @@
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
+- (IBAction)btnBackPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
