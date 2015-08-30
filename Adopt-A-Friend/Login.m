@@ -20,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,13 +48,34 @@
 
 - (IBAction)btnLoginPressed:(id)sender {
     NSString *user = _txtFAlias.text;
+
     NSString *pass = _txtFPassword.text;
     
-    if (user == maUserAlias[0] && pass == maUserPassword[0]) {
+    //get files
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    
+    NSString *arrayFilemaUserAlias = [documentsDirectory stringByAppendingPathComponent:@"maUserAlias.dat"];
+    maUserAlias =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaUserAlias];
+    
+    NSString *arrayFilemaUserPassword = [documentsDirectory stringByAppendingPathComponent:@"maUserPassword.dat"];
+    maUserPassword =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaUserPassword];
+    print(NSLog(@"user: %@", user ));
+    print(NSLog(@"pass: %@", pass ));
+    print(NSLog(@"arrayUser: %@", maUserAlias[0] ));
+    print(NSLog(@"arrayPass: %@", maUserPassword[0] ));
+
+
+    //verify fileds
+    if ([user isEqualToString: maUserAlias[0]  ] && [pass isEqualToString: maUserPassword[0]]){
+        //login Successful
         MainPage *welcome= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainPage"];
         [self presentViewController:welcome animated:YES completion:nil];
     }
     else{
+        //incorrect
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Datos Incorrectos"
                                                            message:@"Favor de ingresar los datos corectos."
                                                           delegate:self
@@ -62,9 +88,10 @@
 }
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
     //Method for moving to the next textfield when the "next" key is pressed
-    print(NSLog(@"textFieldShouldReturn"))
+    //print(NSLog(@"textFieldShouldReturn"))
     if(textField.returnKeyType == UIReturnKeyNext) {
         if (textField == self.txtFAlias) {
+            
             [self.txtFPassword becomeFirstResponder];
         }
         
