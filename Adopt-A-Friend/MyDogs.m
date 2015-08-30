@@ -52,7 +52,7 @@
     if(maNames == nil)
     {
         //Array file didn't exist... create a new one
-        maNames = [[NSMutableArray alloc] initWithCapacity:100];
+        maNames = [[NSMutableArray alloc] initWithCapacity:20];
         //Fill with default values
         maNames         = [[NSMutableArray alloc] initWithObjects:
                            @"Pups",
@@ -72,7 +72,7 @@
     maAges =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaAges];
     if(maAges == nil)
     {
-        maAges = [[NSMutableArray alloc] initWithCapacity:100];
+        maAges = [[NSMutableArray alloc] initWithCapacity:20];
         //Array file didn't exist... create a new one
         maAges          = [[NSMutableArray alloc] initWithObjects:
                            @"17",
@@ -87,21 +87,34 @@
     }
     [maAges writeToFile:arrayFilemaAges atomically:YES];
     
-        
-    maImgs          = [[NSMutableArray alloc] initWithObjects:
-                       @"intro_01.jpg",
-                       @"fluffy.jpg",
-                       @"golden.jpg",
-                       @"husky.jpg",
-                       @"brown.jpg",
-                       nil];
+    //maImgs
+    
+    NSString *arrayFilemaImgs = [documentsDirectory stringByAppendingPathComponent:@"maImgs.dat"];
+    maImgs =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaImgs];
+    if(maImgs == nil)
+    {
+        maImgs = [[NSMutableArray alloc] initWithCapacity:20];
+        //Array file didn't exist... create a new one
+        maImgs          = [[NSMutableArray alloc] initWithObjects:
+                           @"intro_01.jpg",
+                           @"fluffy.jpg",
+                           @"golden.jpg",
+                           @"husky.jpg",
+                           @"brown.jpg",
+                           nil];
+    }
+    else{
+        maImgs = [NSMutableArray arrayWithContentsOfFile:arrayFilemaImgs];
+    }
+    [maImgs writeToFile:arrayFilemaImgs atomically:YES];
+
     
     //maBreeds
     NSString *arrayFilemaBreeds = [documentsDirectory stringByAppendingPathComponent:@"maBreeds.dat"];
-    maAges =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaBreeds];
+    maBreeds =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaBreeds];
     if(maBreeds == nil)
     {
-        maBreeds = [[NSMutableArray alloc] initWithCapacity:100];
+        maBreeds = [[NSMutableArray alloc] initWithCapacity:20];
         //Array file didn't exist... create a new one
         maBreeds       = [[NSMutableArray alloc] initWithObjects:
                           @"Black",
@@ -121,9 +134,10 @@
     maDescriptions =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaDescriptions];
     if(maDescriptions == nil)
     {
-        maDescriptions = [[NSMutableArray alloc] initWithCapacity:100];
+        maDescriptions = [[NSMutableArray alloc] initWithCapacity:20];
         //Array file didn't exist... create a new one
         maDescriptions = [[NSMutableArray alloc] initWithObjects:
+                          @"We are at a business meeting, Tom",
                           @"Flully and Cute.",
                           @"Plays basketball. ",
                           @"Who let the dogs out?!.",
@@ -146,7 +160,7 @@
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return maNames.count;
+    return maImgs.count;
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -160,16 +174,17 @@
     cellDog *cell = (cellDog *)[tableView dequeueReusableCellWithIdentifier:@"cellDog"];
     
     if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"cellDog" bundle:nil] forCellReuseIdentifier:@"cellSimpsons"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"cellSimpsons"];
+        [tableView registerNib:[UINib nibWithNibName:@"cellDog" bundle:nil] forCellReuseIdentifier:@"cellDog"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cellDog"];
     }
     //Fill cell with info from arrays
     cell.lblName.text   = maNames[indexPath.row];
     cell.lblBreed.text  = maBreeds[indexPath.row];
     cell.lblAge.text    = maAges[indexPath.row];
     //check if thre arent any images in the cell and load it from memory
+    
     if ([UIImage imageNamed:maImgs[indexPath.row]]== nil) {
-        NSString *cachedFolderPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
+        NSString *cachedFolderPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
         NSString *cachedImagePath = [cachedFolderPath stringByAppendingPathComponent:maImgs[indexPath.row]];
         cell.imgDog.image = [UIImage imageWithData:[NSData dataWithContentsOfFile: cachedImagePath]];
     }

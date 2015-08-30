@@ -276,7 +276,7 @@ static int iKeyboardHeight = 100;
 #pragma mark - Text fields delegates
 /**********************************************************************************************/
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    print(NSLog(@"txtName"))
+    //print(NSLog(@"txtName"))
     /*if (textField == self.txtName) {
      }*/
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];

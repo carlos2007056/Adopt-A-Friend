@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface Login : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *txtFAlias;
+@property (strong, nonatomic) IBOutlet UITextField *txtFPassword;
+- (IBAction)btnLoginPressed:(id)sender;
 
 @end

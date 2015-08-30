@@ -124,14 +124,34 @@
     [maBreeds addObject:self.txtFBreed.text];
     [maAges addObject:self.txtFAge.text];
     [maDescriptions addObject:self.txtVDesc.text];
-    //save the image in memory
-    NSString *imgName = [self.txtFName.text stringByAppendingString:@".png"];
+    
+    //save the image in sandbox
+    
+    /*
+    NSString *imgName = [self.txtFName.text stringByAppendingString:@".jpg"];
     [imgName stringByReplacingOccurrencesOfString:@" " withString:@"_"];
     [maImgs addObject:imgName];
     UIImage *image = self.imageView.image;
-    NSString *cachedFolderPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
-    NSString *cachedImagePath = [cachedFolderPath stringByAppendingPathComponent:imgName];
-    [UIImagePNGRepresentation(image) writeToFile:cachedImagePath atomically:YES];
+    //permament directory
+    NSString *imagePath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *imageName = [imagePath stringByAppendingPathComponent:imgName];
+    //NSString *cachedImagePath = [cachedFolderPath stringByAppendingPathComponent:imgName];
+    //[UIImagePNGRepresentation(image) writeToFile:imagePath atomically:YES];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+    BOOL result = [imageData writeToFile:imageName atomically:YES];
+    NSLog(@"Saved to %@? %@", imageName, (result? @"YES": @"NO"));
+    */
+    
+    
+    NSString *docsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES) objectAtIndex:0];
+    NSInteger tag = self.imageView.tag;
+    UIImage *image = self.imageView.image;
+    NSString *imageName = [NSString stringWithFormat:@"Image%li.jpg",(long)tag];
+    NSString *imagePath = [docsDir stringByAppendingPathComponent:imageName];
+    [maImgs addObject:imageName];
+    [UIImageJPEGRepresentation(image, 1.0) writeToFile:imagePath atomically:YES];
+    
+    
     
     //save the NSArray to disk to reuse
     //Creating a file path under iOS:
@@ -150,6 +170,10 @@
     //NSMutableArray *yourArray = [[NSMutableArray alloc] initWithContentsOfFile: yourArrayFileName];
     [maAges writeToFile:arrayFilemaDesc atomically:YES];
     
+    NSString *arrayFilemaImgs = [documentsDirectory stringByAppendingPathComponent:@"maImgs.dat"];
+    //NSMutableArray *maNames = [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaNames];
+    [maNames writeToFile:arrayFilemaImgs atomically:YES];
+    
     
     NSString *arrayFilemaLat = [documentsDirectory stringByAppendingPathComponent:@"maBreeds.dat"];
     //NSMutableArray *yourArray = [[NSMutableArray alloc] initWithContentsOfFile: yourArrayFileName];
@@ -159,6 +183,8 @@
     NSString *arrayFilemaLong = [documentsDirectory stringByAppendingPathComponent:@"maDescriptions.dat"];
     //NSMutableArray *yourArray = [[NSMutableArray alloc] initWithContentsOfFile: yourArrayFileName];
     [maDescriptions writeToFile:arrayFilemaLong atomically:YES];
+    
+    
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
