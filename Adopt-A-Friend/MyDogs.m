@@ -46,6 +46,7 @@
     // Create the full file path by appending the desired file name
     //Initialize arrays
     
+    //maNames
     NSString *arrayFilemaNames = [documentsDirectory stringByAppendingPathComponent:@"maNames.dat"];
     maNames =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaNames];
     if(maNames == nil)
@@ -66,13 +67,27 @@
     }
     [maNames writeToFile:arrayFilemaNames atomically:YES];
     
-    maAges          = [[NSMutableArray alloc] initWithObjects:
-                       @"17",
-                       @"18",
-                       @"35",
-                       @"14",
-                       @"25",
-                       nil];
+    //maAges
+    NSString *arrayFilemaAges = [documentsDirectory stringByAppendingPathComponent:@"maAges.dat"];
+    maAges =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaAges];
+    if(maAges == nil)
+    {
+        maAges = [[NSMutableArray alloc] initWithCapacity:100];
+        //Array file didn't exist... create a new one
+        maAges          = [[NSMutableArray alloc] initWithObjects:
+                           @"17",
+                           @"18",
+                           @"35",
+                           @"14",
+                           @"25",
+                           nil];
+    }
+    else{
+        maAges = [NSMutableArray arrayWithContentsOfFile:arrayFilemaAges];
+    }
+    [maAges writeToFile:arrayFilemaAges atomically:YES];
+    
+        
     maImgs          = [[NSMutableArray alloc] initWithObjects:
                        @"intro_01.jpg",
                        @"fluffy.jpg",
@@ -80,19 +95,46 @@
                        @"husky.jpg",
                        @"brown.jpg",
                        nil];
-    maBreeds       = [[NSMutableArray alloc] initWithObjects:
-                       @"Black",
-                       @"Fluffy",
-                       @"Golden",
-                       @"Husky",
-                       @"Golden",
-                       nil];
-    maDescriptions = [[NSMutableArray alloc] initWithObjects:
-                      @"Daenerys is the only daughter and youngest child of King Aerys II Targaryen, the Mad King, and his sister-wife Rhaella.",
-                      @"Jon is the bastard son of Lord Eddard Stark of Winterfell, the head of House Stark and Lord Paramount of the North.", @"He is a dwarf, causing him probems and persecution. His size has led him to being referred to derisively by various names, such as the Imp and The Halfman. This is mitigated by his intellect and his family's wealth and power. ",
-                      @"Joffrey is believed to be the oldest son and heir of King Robert Baratheon and Queen Cersei Lannister, both of whom entered into a political marriage alliance after Robert took the throne by force from the Mad King Aerys II Targaryen. In reality, his father is Jaime Lannister, the queen's brother and the Lord Commander of the Kingsguard.",
-                      @"Drogo is a powerful warlord and feared warrior. He marries Daenerys Targaryen and subsequently grows to love her. He promises to retake the Seven Kingdoms for her after she survives an assassination attempt. ",
-                      nil];
+    
+    //maBreeds
+    NSString *arrayFilemaBreeds = [documentsDirectory stringByAppendingPathComponent:@"maBreeds.dat"];
+    maAges =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaBreeds];
+    if(maBreeds == nil)
+    {
+        maBreeds = [[NSMutableArray alloc] initWithCapacity:100];
+        //Array file didn't exist... create a new one
+        maBreeds       = [[NSMutableArray alloc] initWithObjects:
+                          @"Black",
+                          @"Fluffy",
+                          @"Golden",
+                          @"Husky",
+                          @"Golden",
+                          nil];
+    }
+    else{
+        maBreeds = [NSMutableArray arrayWithContentsOfFile:arrayFilemaBreeds];
+    }
+    [maBreeds writeToFile:arrayFilemaBreeds atomically:YES];
+    
+    //maDescriptions
+    NSString *arrayFilemaDescriptions = [documentsDirectory stringByAppendingPathComponent:@"maDescriptions.dat"];
+    maDescriptions =  [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaDescriptions];
+    if(maDescriptions == nil)
+    {
+        maDescriptions = [[NSMutableArray alloc] initWithCapacity:100];
+        //Array file didn't exist... create a new one
+        maDescriptions = [[NSMutableArray alloc] initWithObjects:
+                          @"Flully and Cute.",
+                          @"Plays basketball. ",
+                          @"Who let the dogs out?!.",
+                          @"Hi, I'm Doug, and I just met you, and I LOVE YOU!. ",
+                          nil];
+    }
+    else{
+        maDescriptions = [NSMutableArray arrayWithContentsOfFile:arrayFilemaDescriptions];
+    }
+    [maDescriptions writeToFile:arrayFilemaDescriptions atomically:YES];
+
 }
 /**********************************************************************************************/
 #pragma mark - Table source and delegate methods

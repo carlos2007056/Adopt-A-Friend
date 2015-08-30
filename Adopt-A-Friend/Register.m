@@ -199,7 +199,8 @@ static int iKeyboardHeight = 100;
     [maUserPassword writeToFile:arrayFileUserPassword atomically:YES];
     
     //end save data
-    /*if (CorrectData==0||CorrectData1==0) {
+    /*
+    if (CorrectData==0||CorrectData1==0) {
         
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Datos Incorrectos"
                                                            message:@"Favor de completar los campos resaltados."
@@ -209,20 +210,20 @@ static int iKeyboardHeight = 100;
         [theAlert show];
         
     } else if (CorrectData==1&&CorrectData1==1)
-    {*/
+    {
         
         MainPage *welcome= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainPage"];
         [self presentViewController:welcome animated:YES completion:nil];
         
         
-    //}
-    
+    }*/
+    MainPage *welcome= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainPage"];
+    [self presentViewController:welcome animated:YES completion:nil];
     //-------------------------------------------------------------------------------
 }
 
 //-------------------------------------------------------------------------------
-- (IBAction)btnMenuPressed:(id)sender {
-}
+
 //-------------------------------------------------------------------------------
 
 //-------------------------------------------------------------------------------
@@ -324,12 +325,7 @@ static int iKeyboardHeight = 100;
         _lblPasswordConfirm.textColor = [UIColor redColor];
         CorrectData1=0;
     }
-}
-
--(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    
-    //email
-    if ([_txtEmail.text length]==0 || [self validateEmailWithString:_txtEmail.text]) {
+    if ([_txtEmail.text length]>0 || [self validateEmailWithString:_txtEmail.text]) {
         _lblEmail.textColor = [UIColor greenColor];
         [_txtEmail resignFirstResponder];
         CorrectData=1;
@@ -341,8 +337,14 @@ static int iKeyboardHeight = 100;
         [_txtEmail resignFirstResponder];
         _lblEmail.textColor = [UIColor redColor];
         
-        return NO;
+
     }
+
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    
+    //email
     
     return YES;
 }

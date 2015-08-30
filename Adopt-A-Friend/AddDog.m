@@ -133,6 +133,33 @@
     NSString *cachedImagePath = [cachedFolderPath stringByAppendingPathComponent:imgName];
     [UIImagePNGRepresentation(image) writeToFile:cachedImagePath atomically:YES];
     
+    //save the NSArray to disk to reuse
+    //Creating a file path under iOS:
+    //Search for the app's documents directory (copy+paste from Documentation)
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    // Create the full file path by appending the desired file name
+    
+    
+    NSString *arrayFilemaNames = [documentsDirectory stringByAppendingPathComponent:@"maNames.dat"];
+    //NSMutableArray *maNames = [[NSMutableArray alloc] initWithContentsOfFile: arrayFilemaNames];
+    [maNames writeToFile:arrayFilemaNames atomically:YES];
+    
+    
+    NSString *arrayFilemaDesc = [documentsDirectory stringByAppendingPathComponent:@"maAges.dat"];
+    //NSMutableArray *yourArray = [[NSMutableArray alloc] initWithContentsOfFile: yourArrayFileName];
+    [maAges writeToFile:arrayFilemaDesc atomically:YES];
+    
+    
+    NSString *arrayFilemaLat = [documentsDirectory stringByAppendingPathComponent:@"maBreeds.dat"];
+    //NSMutableArray *yourArray = [[NSMutableArray alloc] initWithContentsOfFile: yourArrayFileName];
+    [maBreeds writeToFile:arrayFilemaLat atomically:YES];
+    
+    
+    NSString *arrayFilemaLong = [documentsDirectory stringByAppendingPathComponent:@"maDescriptions.dat"];
+    //NSMutableArray *yourArray = [[NSMutableArray alloc] initWithContentsOfFile: yourArrayFileName];
+    [maDescriptions writeToFile:arrayFilemaLong atomically:YES];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
