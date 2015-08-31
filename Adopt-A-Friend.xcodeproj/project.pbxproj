@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23D5231191FD13F07605712F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEE06F63C3482761F149E6D /* libPods.a */; };
+		38490E451B93CBDD005471AE /* dog-icon-breed.png in Resources */ = {isa = PBXBuildFile; fileRef = 38490E441B93CBDD005471AE /* dog-icon-breed.png */; };
 		384CE6621B8BF99000556829 /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = 384CE6611B8BF99000556829 /* Declarations.m */; };
 		384CE6641B8C02EE00556829 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384CE6631B8C02EE00556829 /* FBSDKCoreKit.framework */; };
 		384CE6671B8C02FE00556829 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384CE6651B8C02FE00556829 /* FBSDKLoginKit.framework */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38490E441B93CBDD005471AE /* dog-icon-breed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dog-icon-breed.png"; path = "../../../../Downloads/dog-icon-breed.png"; sourceTree = "<group>"; };
 		384CE6601B8BF99000556829 /* Declarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Declarations.h; sourceTree = "<group>"; };
 		384CE6611B8BF99000556829 /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
 		384CE6631B8C02EE00556829 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-20150813/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 		384CE6661B8C02FE00556829 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-20150813/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		384CE6691B8C044500556829 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		384CE66A1B8C044500556829 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
-		384CE66C1B8C0B3900556829 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		384CE66C1B8C0B3900556829 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		384D01771B8D4F9F00816919 /* Swype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swype.h; sourceTree = "<group>"; };
 		384D01781B8D4F9F00816919 /* Swype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swype.m; sourceTree = "<group>"; };
 		384D017A1B8D4FD400816919 /* DogDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogDetails.h; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				3850190E1B921956004F313D /* 119.mp4 */,
 				385019051B920F5F004F313D /* intro_01.jpg */,
 				3850190B1B92103F004F313D /* intro_02.jpg */,
+				38490E441B93CBDD005471AE /* dog-icon-breed.png */,
 				3850190D1B92194E004F313D /* welcome.mp4 */,
 				385019071B920F5F004F313D /* intro_03.jpg */,
 			);
@@ -371,6 +374,7 @@
 				3850190F1B921A91004F313D /* 119.mp4 in Resources */,
 				385019161B921D5E004F313D /* fluffy.jpg in Resources */,
 				385019101B921A91004F313D /* welcome.mp4 in Resources */,
+				38490E451B93CBDD005471AE /* dog-icon-breed.png in Resources */,
 				384CE66D1B8C0B3900556829 /* Podfile in Resources */,
 				384E3B4F1B8909CC00C7B073 /* Main.storyboard in Resources */,
 				384DBF431B9236DC00D6E079 /* welcome.jpg in Resources */,
