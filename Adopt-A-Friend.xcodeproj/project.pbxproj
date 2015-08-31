@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073FD2741B94FEFC00137868 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 073FD2731B94FEFC00137868 /* Podfile */; };
 		23D5231191FD13F07605712F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEE06F63C3482761F149E6D /* libPods.a */; };
 		38490E451B93CBDD005471AE /* dog-icon-breed.png in Resources */ = {isa = PBXBuildFile; fileRef = 38490E441B93CBDD005471AE /* dog-icon-breed.png */; };
 		384CE6621B8BF99000556829 /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = 384CE6611B8BF99000556829 /* Declarations.m */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		073FD2731B94FEFC00137868 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		38490E441B93CBDD005471AE /* dog-icon-breed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dog-icon-breed.png"; path = "../../../../Downloads/dog-icon-breed.png"; sourceTree = "<group>"; };
 		384CE6601B8BF99000556829 /* Declarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Declarations.h; sourceTree = "<group>"; };
 		384CE6611B8BF99000556829 /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
@@ -110,9 +112,7 @@
 		385019121B921D5E004F313D /* fluffy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fluffy.jpg; sourceTree = "<group>"; };
 		385019131B921D5E004F313D /* golden.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = golden.jpg; sourceTree = "<group>"; };
 		385019141B921D5E004F313D /* husky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = husky.jpg; sourceTree = "<group>"; };
-		3A41CC808CB714616585F2D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Adopt-A-Friend/Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7FEE06F63C3482761F149E6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBA430D2B86861B5F86AE86B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Adopt-A-Friend/Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +141,10 @@
 		384E3B341B8909CC00C7B073 = {
 			isa = PBXGroup;
 			children = (
+				073FD2731B94FEFC00137868 /* Podfile */,
 				384E3B3F1B8909CC00C7B073 /* Adopt-A-Friend */,
 				384E3B5C1B8909CC00C7B073 /* Adopt-A-FriendTests */,
 				384E3B3E1B8909CC00C7B073 /* Products */,
-				66A03E0B2C6F8F98557EAA7F /* Pods */,
 				DBF55E3CDFF9F0FE97329568 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -270,15 +270,6 @@
 			name = imagesVideos;
 			sourceTree = "<group>";
 		};
-		66A03E0B2C6F8F98557EAA7F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BBA430D2B86861B5F86AE86B /* Pods.debug.xcconfig */,
-				3A41CC808CB714616585F2D4 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		DBF55E3CDFF9F0FE97329568 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073FD2741B94FEFC00137868 /* Podfile in Resources */,
 				385019171B921D5E004F313D /* golden.jpg in Resources */,
 				3850190F1B921A91004F313D /* 119.mp4 in Resources */,
 				385019161B921D5E004F313D /* fluffy.jpg in Resources */,
@@ -574,7 +566,6 @@
 		};
 		384E3B641B8909CD00C7B073 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBA430D2B86861B5F86AE86B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -589,7 +580,6 @@
 		};
 		384E3B651B8909CD00C7B073 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A41CC808CB714616585F2D4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
